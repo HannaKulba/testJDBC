@@ -1,0 +1,265 @@
+2020-07-29 22:38:00 INFO  Log:25 - ------- Started test: Проверка подключения к БД -------
+2020-07-29 22:38:00 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: Проверка подключения к БД -------
+2020-07-29 22:38:01 INFO  Log:25 - ------- Started test: Отправка простого SELECT запроса. Проверка имени студента -------
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: SELECT first_name, last_name FROM students WHERE id=10
+2020-07-29 22:38:01 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: Отправка простого SELECT запроса. Проверка имени студента -------
+2020-07-29 22:38:01 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка фамилии студента -------
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: SELECT first_name, last_name FROM students WHERE id=10
+2020-07-29 22:38:01 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка фамилии студента -------
+2020-07-29 22:38:01 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка имени последнего в списке студента -------
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:01 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка имени последнего в списке студента -------
+2020-07-29 22:38:01 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка фамилии последнего в списке студента -------
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:01 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка фамилии последнего в списке студента -------
+2020-07-29 22:38:01 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка группы последнего в списке студента -------
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:01 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка группы последнего в списке студента -------
+2020-07-29 22:38:01 INFO  Log:25 - ------- Started test: Отправка INSERT запроса -------
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: INSERT INTO students.disciplines (ID, DISCIPLINE_NAME, HOURS) VALUES ('412890', 'Mathematic analisys', '104')
+2020-07-29 22:38:01 INFO  Log:25 - New data inserted into table
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: SELECT discipline_name FROM students.disciplines WHERE id=412890
+2020-07-29 22:38:01 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: Отправка INSERT запроса -------
+2020-07-29 22:38:01 INFO  Log:25 - ------- Started test: Отправка DELETE запроса -------
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: DELETE FROM students.disciplines WHERE id=412890
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Data from table was deleted
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: Отправка DELETE запроса -------
+2020-07-29 22:38:01 INFO  Log:25 - ------- Started test: testUpdateRequest() -------
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: UPDATE students.students SET first_name = 'Anastasia' WHERE id=11
+2020-07-29 22:38:01 INFO  Log:25 - Data in table was updated
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:01 INFO  Log:25 - Send request to DB: SELECT first_name FROM students.students WHERE id=11
+2020-07-29 22:38:01 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:01 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:01 INFO  Log:25 - Statement closed
+2020-07-29 22:38:01 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:01 INFO  Log:25 - ------- Finished test: testUpdateRequest() -------
+2020-07-29 22:38:14 INFO  Log:25 - ------- Started test: Проверка подключения к БД -------
+2020-07-29 22:38:14 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: Проверка подключения к БД -------
+2020-07-29 22:38:15 INFO  Log:25 - ------- Started test: Отправка простого SELECT запроса. Проверка имени студента -------
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: SELECT first_name, last_name FROM students WHERE id=10
+2020-07-29 22:38:15 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: Отправка простого SELECT запроса. Проверка имени студента -------
+2020-07-29 22:38:15 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка фамилии студента -------
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: SELECT first_name, last_name FROM students WHERE id=10
+2020-07-29 22:38:15 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка фамилии студента -------
+2020-07-29 22:38:15 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка имени последнего в списке студента -------
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:15 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка имени последнего в списке студента -------
+2020-07-29 22:38:15 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка фамилии последнего в списке студента -------
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:15 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка фамилии последнего в списке студента -------
+2020-07-29 22:38:15 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка группы последнего в списке студента -------
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:15 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка группы последнего в списке студента -------
+2020-07-29 22:38:15 INFO  Log:25 - ------- Started test: Отправка INSERT запроса -------
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: INSERT INTO students.disciplines (ID, DISCIPLINE_NAME, HOURS) VALUES ('412890', 'Mathematic analisys', '104')
+2020-07-29 22:38:15 INFO  Log:25 - New data inserted into table
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: SELECT discipline_name FROM students.disciplines WHERE id=412890
+2020-07-29 22:38:15 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: Отправка INSERT запроса -------
+2020-07-29 22:38:15 INFO  Log:25 - ------- Started test: Отправка DELETE запроса -------
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: DELETE FROM students.disciplines WHERE id=412890
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Data from table was deleted
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: Отправка DELETE запроса -------
+2020-07-29 22:38:15 INFO  Log:25 - ------- Started test: testUpdateRequest() -------
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: UPDATE students.students SET first_name = 'Anastasia' WHERE id=11
+2020-07-29 22:38:15 INFO  Log:25 - Data in table was updated
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:15 INFO  Log:25 - Send request to DB: SELECT first_name FROM students.students WHERE id=11
+2020-07-29 22:38:15 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:15 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:15 INFO  Log:25 - Statement closed
+2020-07-29 22:38:15 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:15 INFO  Log:25 - ------- Finished test: testUpdateRequest() -------
+2020-07-29 22:38:52 INFO  Log:25 - ------- Started test: Проверка подключения к БД -------
+2020-07-29 22:38:52 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: Проверка подключения к БД -------
+2020-07-29 22:38:53 INFO  Log:25 - ------- Started test: Отправка простого SELECT запроса. Проверка имени студента -------
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: SELECT first_name, last_name FROM students WHERE id=10
+2020-07-29 22:38:53 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - Statement closed
+2020-07-29 22:38:53 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: Отправка простого SELECT запроса. Проверка имени студента -------
+2020-07-29 22:38:53 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка фамилии студента -------
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: SELECT first_name, last_name FROM students WHERE id=10
+2020-07-29 22:38:53 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - Statement closed
+2020-07-29 22:38:53 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка фамилии студента -------
+2020-07-29 22:38:53 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка имени последнего в списке студента -------
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:53 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - Statement closed
+2020-07-29 22:38:53 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка имени последнего в списке студента -------
+2020-07-29 22:38:53 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка фамилии последнего в списке студента -------
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:53 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - Statement closed
+2020-07-29 22:38:53 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка фамилии последнего в списке студента -------
+2020-07-29 22:38:53 INFO  Log:25 - ------- Started test: Отправка SELECT JOIN запроса. Проверка группы последнего в списке студента -------
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: SELECT s.first_name, s.last_name, g.group_name FROM students.students s LEFT JOIN students.groups g ON s.group_id=g.id
+2020-07-29 22:38:53 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - Statement closed
+2020-07-29 22:38:53 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: Отправка SELECT JOIN запроса. Проверка группы последнего в списке студента -------
+2020-07-29 22:38:53 INFO  Log:25 - ------- Started test: Отправка INSERT запроса -------
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: INSERT INTO students.disciplines (ID, DISCIPLINE_NAME, HOURS) VALUES ('412890', 'Mathematic analisys', '104')
+2020-07-29 22:38:53 INFO  Log:25 - New data inserted into table
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: SELECT discipline_name FROM students.disciplines WHERE id=412890
+2020-07-29 22:38:53 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - Statement closed
+2020-07-29 22:38:53 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: Отправка INSERT запроса -------
+2020-07-29 22:38:53 INFO  Log:25 - ------- Started test: Отправка DELETE запроса -------
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: DELETE FROM students.disciplines WHERE id=412890
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Data from table was deleted
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - Statement closed
+2020-07-29 22:38:53 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: Отправка DELETE запроса -------
+2020-07-29 22:38:53 INFO  Log:25 - ------- Started test: testUpdateRequest() -------
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: UPDATE students.students SET first_name = 'Anastasia' WHERE id=11
+2020-07-29 22:38:53 INFO  Log:25 - Data in table was updated
+2020-07-29 22:38:53 INFO  Log:25 - Connect to DB jdbc:mysql://192.168.100.185:3306/students by user senla
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB successful!
+2020-07-29 22:38:53 INFO  Log:25 - Send request to DB: SELECT first_name FROM students.students WHERE id=11
+2020-07-29 22:38:53 INFO  Log:25 - Data from table was got
+2020-07-29 22:38:53 INFO  Log:25 - Connection to DB closed
+2020-07-29 22:38:53 INFO  Log:25 - Statement closed
+2020-07-29 22:38:53 INFO  Log:25 - ResultSet closed
+2020-07-29 22:38:53 INFO  Log:25 - ------- Finished test: testUpdateRequest() -------
